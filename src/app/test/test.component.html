@@ -1,0 +1,28 @@
+<h2>
+    Hello {{name}}!
+</h2>
+
+<!--regular way to apply class-->
+<h2 class="text-success">
+    regular way to apply a class
+</h2>
+
+<!--class binding-->
+<h2 [class]="successClass">
+    class binding example
+</h2>
+
+<!--Following line of code is to check what happen when class binding and regular class attribute is used in a tag at a time-->
+<h2 [class]="successClass" class="text-special">
+    regular class attribute and class binding used together
+</h2>
+<!--In such case, class attribute becomes a dummy attribute due to the the presence of class binding i.e. class attribute is not applied to the element-->
+
+<!--now we will apply class text-danger to the element based on wether hasError property is true or false -->
+<h2 [class.text-danger]="hasError">
+    this sentence will be red if hasError is true
+</h2>
+
+<h2 [ngClass]="messageClasses">
+    to understand why this line is red and italic got through the messageClasses property inside TestComponent class in test.component.ts
+</h2>
